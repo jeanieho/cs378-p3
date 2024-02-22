@@ -8,13 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MenuItem = ({ title, description, imageName, price, quantity, onAdd, onRemove }) => {
   return (
-    <div className="container my-3">
-      <div className="row border p-3">
+    <div className="container">
+      <div className="row">
         <div className="col-4">
           <img
             src={require(`../images/${imageName}`)}
             alt={title}
-            className="img-fluid rounded-3"
+            className="rounded-3"
+            style={{ width: "110%" }}
           />
         </div>
         <div className="col-8">
@@ -25,9 +26,9 @@ const MenuItem = ({ title, description, imageName, price, quantity, onAdd, onRem
           <div className="card-footer d-flex justify-content-between align-items-center">
             <p className="card-text-price">Price: ${price}</p>
             <div className="d-flex align-items-center">
-              <button className="btn btn-sm btn-secondary me-2" onClick={onRemove}>-</button>
+              <button className="rounded-5" onClick={onRemove}>-</button>
               <span className="mx-2">{quantity}</span>
-              <button className="btn btn-sm btn-primary" onClick={onAdd}>+</button>
+              <button className="rounded-5" onClick={onAdd}>+</button>
             </div>
           </div>
         </div>
@@ -35,5 +36,6 @@ const MenuItem = ({ title, description, imageName, price, quantity, onAdd, onRem
     </div>
   );
 };
+
 
 export default MenuItem;

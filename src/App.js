@@ -158,7 +158,12 @@ function App() {
 
       <div className="cart" >
         <p>Subtotal: ${subtotal.toFixed(2)}</p>
-        <button className="rounded-3" style={{ backgroundColor: '#ADD8E6' }} onClick={placeOrder}>Order</button>
+        <button 
+          className="rounded-3" 
+          style={{ backgroundColor: '#ADD8E6' }} 
+          onClick={placeOrder}
+          >Order
+        </button>
         <button className="rounded-3" onClick={clearCart}>Clear all</button>
       </div>
     </div>
